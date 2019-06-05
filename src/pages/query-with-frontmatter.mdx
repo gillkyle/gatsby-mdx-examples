@@ -1,0 +1,21 @@
+---
+name: "kyle"
+---
+
+import { graphql } from "gatsby";
+
+export const pageQuery = graphql`
+  query BasicWithQuery2 {
+    site {
+      siteMetadata {
+        description
+      }
+    }
+  }
+`;
+
+# Site Description
+
+<span>{props.data.site.siteMetadata.description}</span>
+
+<span>{props.pageContext.frontmatter.name}</span>

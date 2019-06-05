@@ -1,0 +1,16 @@
+import { graphql } from "gatsby";
+
+export const pageQuery = graphql`
+  query BasicWithQuery {
+    site {
+      siteMetadata {
+        description
+      }
+    }
+  }
+`;
+
+# Site Description
+
+<span>{props.data.site.siteMetadata.description}</span>
+

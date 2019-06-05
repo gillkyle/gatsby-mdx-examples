@@ -2,9 +2,9 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter MDX Basic',
+    title: 'Gatsby Starter MDX Basic - Examples',
     description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
+      'Examples using MDX with Gatsby',
     author: '@chrisbiscardi',
   },
   plugins: [

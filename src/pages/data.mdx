@@ -1,0 +1,14 @@
+<!-- exporting an object -->
+export const metadata = {
+  name: "World"
+};
+
+<span>Hello, {metadata.name}</span>
+
+The span above will read: "Hello, World".
+
+<!-- exporting and array -->
+export const names = ["Abdullah", "Adam", "Alice", "Aida", metadata.name]
+
+<div>{names.map(name => <div>{name}</div>)}</div>
+
