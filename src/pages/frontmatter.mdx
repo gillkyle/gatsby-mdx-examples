@@ -3,7 +3,7 @@ title: "Building with Gatsby"
 author: "Jay Gatsby"
 ---
 
-<h1>{props.pageContext.frontmatter.title}</h1>
+<h1 children={props.pageContext.frontmatter.title} />
 
 <span>{props.pageContext.frontmatter.author}</span>
 
