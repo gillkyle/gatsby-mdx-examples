@@ -2,17 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
-import { MDXProvider } from "@mdx-js/tag";
+import { MDXProvider } from "@mdx-js/react";
+
 import Header from "./header";
 import "./layout.css";
+import CodeBlock from "../components/codeblock"
 
-const MyCodeComponent = ({ children, ...props }) => (
-  <LiveProvider code={children}>
-    <LiveEditor />
-    <LiveError />
-    <LivePreview />
-  </LiveProvider>
-);
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -27,7 +22,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <MDXProvider components={{ code: MyCodeComponent }}>
+        <MDXProvider components={{ code: CodeBlock }}>
           <Header siteTitle={data.site.siteMetadata.title} />
           <div
             style={{
